@@ -1,1 +1,32 @@
 
+PImage back;
+int bx = 0, bx2 = 700;
+PImage mid;
+int mx = 0, mx2 = 700;
+PImage fore;
+int fx = 0, fx2 = 700;
+void setup(){
+  size(700, 500);
+  back = loadImage("back.png");
+  back.resize(700, 500);
+  mid = loadImage("mid.png");
+  mid.resize(700, 1000);
+  fore = loadImage("fore.png");
+  fore.resize(700, 500);
+  
+}
+
+void draw() {
+  image(back,bx,0); image(back,bx2,0);
+  image(mid,mx,0); image(mid,mx2,0);
+  image(fore,fx,0); image(fore,fx2,0);
+  
+  bx--; bx2--;
+  mx-=2; mx2-=2;
+  fx-=3; fx2-=3;
+  
+  if(bx<-700){bx = 700;}   if(bx2<-700){bx2 = 700;} 
+  if(mx<-700){mx = 700;}   if(mx2<-700){mx2 = 700;} 
+  if(fx<-700){fx = 700;}   if(fx2<-700){fx2 = 700;} 
+}
+
