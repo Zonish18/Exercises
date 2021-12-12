@@ -1,1 +1,16 @@
 
+size(1200, 500);
+background(51);
+PFont f = createFont("AlNile-48.vlw", 50);
+String s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+textFont(f);
+textSize(50);
+
+float x = 10;
+for (int i = 0; i < s.length(); i++) {
+  char c = s.charAt(i);
+  fill(random(255));
+  textSize(random(10, 100));
+  text(c, x, 300); 
+  x = x + textWidth(c);
+}
