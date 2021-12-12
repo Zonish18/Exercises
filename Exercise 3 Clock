@@ -1,1 +1,51 @@
 
+void setup() {
+
+  size(800, 800);
+  background(0);
+}
+
+void draw() {
+  fill(0);
+  rect(0, 0, 600, 600);
+  int s = second();
+  int h = hour();
+  int m = minute();
+  String time;
+
+  if (h>=10)
+    time = h + "" ;
+  else
+    time = "0" + h;
+    
+  if (m<10)
+    time = time + ":0" + m;
+  else
+    time = time + ":" + m;
+
+  if (s<10)
+    time = time + ":0" + s;
+  else
+    time = time + ":" + s;
+
+  if (h>12)
+    h = h - 12;
+
+  translate(300, 300);
+  rotate(radians(-90));
+
+   noFill();
+   
+  strokeWeight(10);
+  stroke(255);
+  arc(0, 0, 400, 400, 0, ((2*PI)/60)*s, PIE);
+
+  stroke(255, 100, 150);
+  arc(0, 0, 350, 350, 0, ((2*PI)/60)*m);
+
+  stroke(255, 200, 300);
+  arc(0, 0, 300, 300, 0, ((2*PI)/12)*h);
+
+
+  rotate(radians(90));
+}
