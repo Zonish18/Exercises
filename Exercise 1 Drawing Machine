@@ -1,1 +1,40 @@
 
+float prevMouseX = 0;
+float prevMouseY = 0;
+
+void setup(){
+  size(1500,820);
+  background(205);
+    
+}
+
+void draw(){
+  fill(300,300,300,30);
+  rect(width,height,0,0); 
+ 
+}
+
+void mousePressed(){
+  prevMouseX = mouseX;
+  prevMouseY = mouseY;
+}
+
+void mouseDragged(){
+  fill(0);
+  float distanceX;
+  float distanceY;
+  
+  distanceX = abs(mouseX - prevMouseX);
+  distanceY = abs(mouseY - prevMouseY);
+  
+  float avDistance;
+  
+  avDistance = (distanceX + distanceY)/2;
+  
+  ellipse(mouseX,mouseY,avDistance,avDistance);
+  
+  prevMouseX = mouseX;
+  prevMouseY = mouseY;
+  
+}
+  
