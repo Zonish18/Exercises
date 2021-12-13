@@ -1,4 +1,4 @@
-
+//code inspo from https://www.youtube.com/watch?v=vwYFqLdZPfw
 PImage back;
 int bx = 0, bx2 = 700;
 PImage mid;
