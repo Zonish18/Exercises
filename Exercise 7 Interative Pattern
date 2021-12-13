@@ -1,3 +1,5 @@
+//code inspo from https://github.com/anvarazizov/day10_processing_challenge/
+
 float x, y;
 float xStep = 5;
 float yStep = 200;
