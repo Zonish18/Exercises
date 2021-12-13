@@ -1,4 +1,4 @@
-
+//code inspo from https://www.youtube.com/watch?v=NLzne4XaR3M&t=793s
 size(1200, 500);
 background(51);
 PFont f = createFont("AlNile-48.vlw", 50);
